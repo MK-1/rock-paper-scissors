@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+<body>
+    <script>
+        let choices = ['rock', 'paper', 'scissors']
+        let userChoice = prompt("Rock, paper, scissors... shoot!");
+        let computerChoice = Math.floor(Math.random() * 2);
+    
+        do {
+        userChoice = choices.indexOf(userChoice.toLowerCase());
+        } while (choices < 0);
+        
+        if (userChoice === computerChoice) {
+        console.log('Both chose ' + choices[userChoice] + '. You tied.')
+        } else if (computerChoice === ((userChoice === 0) ? 2 : userChoice - 1)) {
+        console.log(choices[userChoice] + ' beats ' + choices[computerChoice] + '. You Win!');
+        } else {
+        console.log(choices[computerChoice] + ' beats ' + choices[userChoice] + '. You Lose!');
+        };
+
+    
+
+
+
+
+    </script>
+</body>
+</html>
